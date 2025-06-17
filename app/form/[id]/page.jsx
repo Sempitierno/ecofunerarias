@@ -1,3 +1,5 @@
+'use server'
+
 import { openDB } from "@/lib/sqlite"
 import FormUpdate from "@/components/formupdate"
 

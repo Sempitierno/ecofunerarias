@@ -10,7 +10,12 @@ export default function Form() {
 
     async function ManejarSubida(){
         console.log(nombre, ranking, compras)
+        try {
+
         await Datasave(nombre, ranking, compras)
+        } catch (e) {
+            console.log(e)
+        }
 
     }
 

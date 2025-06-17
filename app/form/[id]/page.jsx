@@ -3,8 +3,17 @@ import FormUpdate from "@/components/formupdate"
 
 export default async function Page({params}) {
     const {id}=await params
-    const db=await openDB()
-    const funeraria= await db.get("select * from funerarias where id = ?", [id]) 
+    let funeraria = {}
+    try {
+    const db = await openDB() 
+    if (db) {
+    funeraria= await db.get("select * from funerarias where id = ?", [id]) 
+    } else {
+        funeraria = {}
+    }
+    } catch (e) {
+        funeraria = {}
+    }
     console.log(funeraria)
 
     return (

@@ -151,7 +151,7 @@ export default function Dashboard({ data }: any) {
                   nameKey="name"
                   label={({ name, value }) => `${name}: ${value}`}
                 >
-                  {pieChartData.map((entry, index) => (
+                  {pieChartData.map((entry: any, index: any) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

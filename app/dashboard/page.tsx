@@ -8,10 +8,14 @@ import { openDB } from "@/lib/sqlite";
 
 
 export default async function Page() {
-  let data
+  let data = []
   try {
   const db = await openDB() 
+  if (db) {
   data = await db.all("select * from funerarias")
+  } else {
+    data = []
+  }
   } catch (e) {
     data = []
   }

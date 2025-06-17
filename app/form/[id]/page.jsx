@@ -9,14 +9,15 @@ export default async function Page({params}) {
     try {
     const db = await openDB() 
     if (db) {
-    funeraria= await db.get("select * from funerarias where id = ?", [id]) 
+    funeraria = await db.get("select * from funerarias where id = ?", [id]) 
     } else {
         funeraria = {}
     }
     } catch (e) {
+        console.log(e)
         funeraria = {}
     }
-    console.log(funeraria)
+    console.log(funeraria, id)
 
     return (
         <div>

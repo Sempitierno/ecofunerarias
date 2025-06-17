@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Typography variant="h6"> Admin Dashboard</Typography>
+                <Typography className="gb-green-500"> Admin Dashboard</Typography>
             </Toolbar>
         </AppBar>
     );

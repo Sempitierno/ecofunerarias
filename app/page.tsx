@@ -129,10 +129,9 @@ export default async function Home() {
 
         {/* Contacto */}
         <section id="contact" className="max-w-6xl mx-auto bg-emerald-50 p-10 rounded-xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Contacto</h2>
+          <h2 className="text-3xl font-bold mb-4">Escriba su Testimonio</h2>
           <p className="max-w-[600px] mx-auto mb-6 text-gray-600">
-            ¿Tienes preguntas o deseas más información? Escríbenos y encontrarás el servicio perfecto para tus
-            necesidades ecológicas.
+            ¿Tienes alguna opinión que quieras dejar? Dejanos tu comentario en el siguiente link!
           </p>
           <Button asChild className="bg-emerald-600 hover:bg-emerald-700">
             <a href="mailto:info@ecofunerarias.cl">info@ecofunerarias.cl</a>

@@ -34,6 +34,8 @@ export function Header() {
     { name: "Métodos", href: "/#methods" },
     { name: "Directorio", href: "/#directory" },
     { name: "Contacto", href: "/#contact" },
+    { name: "Ranking", href: "/dashboard"},
+    
   ]
 
   return (
@@ -65,22 +67,6 @@ export function Header() {
         <div className="flex items-center gap-3">
           {user ? (
             <>
-              <Link href="/dashboard/favorites" passHref className="hidden sm:flex">
-                <Button variant="ghost" size="icon" className="text-emerald-700">
-                  <Heart className="h-5 w-5" />
-                  <span className="sr-only">Favoritos</span>
-                </Button>
-              </Link>
-              <Link href="/dashboard" passHref>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="hidden sm:flex gap-2 border-emerald-200 text-emerald-700"
-                >
-                  <User className="h-4 w-4" />
-                  Mi Cuenta
-                </Button>
-              </Link>
               <Button
                 variant="ghost"
                 size="sm"
@@ -132,22 +118,6 @@ export function Header() {
                 {user ? (
                   <>
                     <div className="h-px bg-gray-200 my-2"></div>
-                    <Link
-                      href="/dashboard"
-                      onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium py-2 hover:text-emerald-600 transition-colors flex items-center gap-2"
-                    >
-                      <User className="h-4 w-4" />
-                      Mi Cuenta
-                    </Link>
-                    <Link
-                      href="/dashboard/favorites"
-                      onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium py-2 hover:text-emerald-600 transition-colors flex items-center gap-2"
-                    >
-                      <Heart className="h-4 w-4" />
-                      Favoritos
-                    </Link>
                     <Button
                       variant="ghost"
                       className="justify-start px-0 text-lg font-medium hover:text-emerald-600 transition-colors"

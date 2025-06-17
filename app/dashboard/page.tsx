@@ -3,7 +3,7 @@
 
 import Dashboard from "@/components/dashboard";
 import Header from "@/components/header_dashboard";
-import Sidebar from "@/components/sidebar";
+
 import { openDB } from "@/lib/sqlite";
 
 
@@ -13,9 +13,7 @@ export default async function Page() {
   console.log(data)
   return (
       <div style={{ display: 'flex'}}>
-        <Sidebar/>
         <div style={{ flexGrow: 1}}>
-          <Header />
           <Dashboard data={data}/>
         </div>
       </div>
